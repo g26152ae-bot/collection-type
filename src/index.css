@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes feverPulse {
+    0% {
+      box-shadow: 0 0 12px #f59e0b, inset 0 0 10px #b45309;
+    }
+    100% {
+      box-shadow: 0 0 30px #fbbf24, 0 0 50px #f59e0b, inset 0 0 20px #d97706;
+    }
+  }
+
+  @keyframes godGlow {
+    0% {
+      box-shadow: 0 0 10px #ffd700;
+      border-color: #ffd700;
+    }
+    50% {
+      box-shadow: 0 0 25px #ec4899, 0 0 40px #ffd700;
+      border-color: #ec4899;
+    }
+    100% {
+      box-shadow: 0 0 35px #a855f7, 0 0 50px #ffd700;
+      border-color: #a855f7;
+    }
+  }
+
+  @keyframes eatBounce {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    40% {
+      transform: translate(-50%, -85%) scale(1.35) rotate(12deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translate(-50%, 100%) scale(0.1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes timePopAnim {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(0.9);
+    }
+    40% {
+      opacity: 1;
+      transform: translate(-50%, -20px) scale(1.3);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50px) scale(1.6);
+    }
+  }
+
+  @keyframes conveyorMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 0;
+    }
+  }
+}
+
+.anim-fever {
+  animation: feverPulse 0.7s infinite alternate;
+}
+
+.anim-god {
+  animation: godGlow 1.8s infinite alternate;
+}
+
+.anim-eat {
+  animation: eatBounce 0.32s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+.anim-pop {
+  animation: timePopAnim 0.85s ease-out forwards;
+}
+
+.conveyor-belt {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 18px,
+    rgba(0, 0, 0, 0.25) 18px,
+    rgba(0, 0, 0, 0.25) 36px
+  );
+  animation: conveyorMove 1s linear infinite;
+}
+
+.rarity-GOD {
+  color: #fde047;
+  text-shadow: 0 0 12px #eab308, 0 0 24px #ec4899;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(236, 72, 153, 0.25));
+  border: 1px solid rgba(250, 204, 21, 0.6);
+}
+
+.rarity-UR {
+  color: #f472b6;
+  text-shadow: 0 0 12px #ec4899;
+  background: rgba(236, 72, 153, 0.2);
+  border: 1px solid rgba(244, 114, 182, 0.5);
+}
+
+.rarity-SSR {
+  color: #fbbf24;
+  text-shadow: 0 0 10px #f59e0b;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+}
+
+.rarity-SR {
+  color: #f87171;
+  text-shadow: 0 0 8px #ef4444;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+.rarity-R {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+}
+
+.rarity-N {
+  color: #cbd5e1;
+  background: rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.rarity-TIME {
+  color: #34d399;
+  text-shadow: 0 0 10px #10b981;
+  background: rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(52, 211, 153, 0.6);
+}
+
+.rarity-CUSTOM {
+  color: #22d3ee;
+  text-shadow: 0 0 10px #06b6d4;
+  background: rgba(6, 182, 212, 0.25);
+  border: 1px solid rgba(34, 211, 238, 0.6);
+}
+
+/* Custom Japanese font */
+body {
+  font-family: 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+
+.font-sushi {
+  font-family: 'Yuji Syuku', serif;
+}

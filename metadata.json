@@ -1,0 +1,6 @@
+{
+  "name": "すしコレクション！ガチャ回転寿司タイピング",
+  "description": "110種以上の寿司を集めるガチャ回転寿司タイピングゲーム！爽快タイピング、能力強化、図鑑コンプリート、リアルタイムランキングを楽しもう！",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
